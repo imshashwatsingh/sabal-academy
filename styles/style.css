@@ -840,11 +840,28 @@ a:hover {
     color: var(--white);
     font-weight: 700;
     transition: all var(--transition-base);
+    border: 2px solid transparent;
 }
 
 .footer__social-link:hover {
     background-color: var(--accent-color);
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.1);
+    border-color: var(--white);
+    box-shadow: 0 8px 20px rgba(111, 207, 151, 0.3);
+}
+
+.footer__social-link:active {
+    transform: translateY(-1px) scale(1.05);
+}
+
+.footer__social-link svg {
+    width: 22px;
+    height: 22px;
+    transition: all var(--transition-base);
+}
+
+.footer__social-link:hover svg {
+    filter: brightness(1.1);
 }
 
 .footer__bottom {
