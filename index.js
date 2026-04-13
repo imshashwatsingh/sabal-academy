@@ -359,5 +359,18 @@ window.addEventListener('scroll', updateNavbarShadow, { passive: true });
 // INIT MESSAGE
 // ===================================
 
+// ===================================
+// DYNAMIC YEAR IN FOOTER
+// ===================================
+
+const yearElement = document.getElementById('year');
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
+
+// ===================================
+// CONSOLE MESSAGES
+// ===================================
+
 console.log('%cSabal Academy Website', 'color: #1F6F5F; font-size: 20px; font-weight: bold;');
 console.log('%cDesigned with ❤️ for educational excellence', 'color: #2FA084; font-size: 14px;');
