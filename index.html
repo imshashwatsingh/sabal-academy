@@ -1,442 +1,783 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sabal Academy - Premier Coaching Institute for Academic Excellence">
-    <meta name="keywords" content="coaching, academy, education, courses, training">
-    <meta name="author" content="Sabal Academy">
-    <meta name="theme-color" content="#1F6F5F">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sabal Academy - Premier Coaching Institute for Academic Excellence"
+    />
+    <meta
+      name="keywords"
+      content="coaching, academy, education, courses, training"
+    />
+    <meta name="author" content="Sabal Academy" />
+    <meta name="theme-color" content="#1F6F5F" />
+
     <title>Sabal Academy - Excellence in Education</title>
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231F6F5F' width='100' height='100'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>SA</text></svg>">
-    
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231F6F5F' width='100' height='100'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>SA</text></svg>"
+    />
+
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
     <!-- Navigation Bar -->
     <nav class="navbar" id="navbar">
-        <div class="navbar__container">
-            <div class="navbar__logo">
-                <span class="navbar__logo-icon">SA</span>
-                <span class="navbar__logo-text">Sabal Academy</span>
-            </div>
-            
-            <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu">
-                <span class="navbar__toggle-line"></span>
-                <span class="navbar__toggle-line"></span>
-                <span class="navbar__toggle-line"></span>
-            </button>
-            
-            <ul class="navbar__menu" id="navbarMenu">
-                <li class="navbar__item"><a href="#home" class="navbar__link">Home</a></li>
-                <li class="navbar__item"><a href="#about" class="navbar__link">About</a></li>
-                <li class="navbar__item"><a href="#courses" class="navbar__link">Courses</a></li>
-                <li class="navbar__item"><a href="#why-us" class="navbar__link">Why Us</a></li>
-                <li class="navbar__item"><a href="#testimonials" class="navbar__link">Testimonials</a></li>
-                <li class="navbar__item"><a href="#contact" class="navbar__link">Contact</a></li>
-                <li class="navbar__item navbar__item--cta">
-                    <a href="#enquiry" class="navbar__link navbar__link--cta">Enquire Now</a>
-                </li>
-            </ul>
+      <div class="navbar__container">
+        <div class="navbar__logo">
+          <span class="navbar__logo-icon">SA</span>
+          <span class="navbar__logo-text">Sabal Academy</span>
         </div>
+
+        <button
+          class="navbar__toggle"
+          id="navbarToggle"
+          aria-label="Toggle menu"
+        >
+          <span class="navbar__toggle-line"></span>
+          <span class="navbar__toggle-line"></span>
+          <span class="navbar__toggle-line"></span>
+        </button>
+
+        <ul class="navbar__menu" id="navbarMenu">
+          <li class="navbar__item">
+            <a href="#home" class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__link">About</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#courses" class="navbar__link">Courses</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#why-us" class="navbar__link">Why Us</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#school-integration" class="navbar__link"
+              >School Integration</a
+            >
+          </li>
+          <li class="navbar__item">
+            <a href="#testimonials" class="navbar__link">Testimonials</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#contact" class="navbar__link">Contact</a>
+          </li>
+          <li class="navbar__item navbar__item--cta">
+            <a href="#enquiry" class="navbar__link navbar__link--cta"
+              >Enquire Now</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero__content">
-            <h1 class="hero__title">Transform Your Future with Sabal Academy</h1>
-            <p class="hero__subtitle">Excellence in education, personalized learning paths, and proven career outcomes</p>
-            <button class="btn btn--primary btn--lg" data-scroll-to="#enquiry">Start Your Journey</button>
-        </div>
-        <div class="hero__background"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">Transform Your Future with Sabal Academy</h1>
+        <p class="hero__subtitle">
+          Excellence in education, personalized learning paths, and proven
+          career outcomes
+        </p>
+        <button class="btn btn--primary btn--lg" data-scroll-to="#enquiry">
+          Start Your Journey
+        </button>
+      </div>
+      <div class="hero__background"></div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">About Sabal Academy</h2>
-                <p class="section__subtitle">Transforming Lives Through Quality Education</p>
-            </div>
-            
-            <div class="about__grid">
-                <div class="about__image">
-                    <div class="placeholder-image"></div>
-                </div>
-                <div class="about__content">
-                    <p class="about__text">
-                        Sabal Academy is a leading educational institute dedicated to providing world-class coaching and training programs. With over a decade of experience, we have shaped the careers of thousands of students.
-                    </p>
-                    <p class="about__text">
-                        Our expert faculty, comprehensive curriculum, and personalized approach ensure that every student achieves their maximum potential.
-                    </p>
-                    
-                    <div class="about__stats">
-                        <div class="stat-card">
-                            <h3 class="stat-card__number">5000+</h3>
-                            <p class="stat-card__label">Students Trained</p>
-                        </div>
-                        <div class="stat-card">
-                            <h3 class="stat-card__number">95%</h3>
-                            <p class="stat-card__label">Success Rate</p>
-                        </div>
-                        <div class="stat-card">
-                            <h3 class="stat-card__number">50+</h3>
-                            <p class="stat-card__label">Expert Instructors</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section__header">
+          <span class="badge">15+ Years of Excellence</span>
+          <h2 class="section__title">About Sabal Academy</h2>
+          <p class="section__subtitle">
+            Empowering Students. Transforming Futures.
+          </p>
         </div>
+
+        <div class="about__grid">
+          <!-- Left: Visual Side (Enhanced) -->
+          <div class="about__image">
+            <div class="about__image-wrapper">
+              <div
+                class="placeholder-image"
+                style="
+                  font-size: 6rem;
+                  background: linear-gradient(
+                    135deg,
+                    var(--primary-color),
+                    var(--secondary-color)
+                  );
+                "
+              >
+                🎓<br /><span
+                  style="
+                    font-size: 1.1rem;
+                    opacity: 0.9;
+                    display: block;
+                    margin-top: 1rem;
+                  "
+                  >Sabal Academy</span
+                >
+              </div>
+
+              <!-- Decorative elements -->
+              <div class="about__image-overlay">
+                <div class="achievement-badge">
+                  <span class="badge badge--secondary">🏆</span>
+                  <p>MSME Recognized</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Content Side -->
+          <div class="about__content">
+            <h3 class="about__heading">
+              Building Careers with
+              <span class="highlight">Proven Academic Excellence</span>
+            </h3>
+
+            <p class="about__text">
+              For over 15 years, Sabal Academy has been a beacon of quality
+              education in Delhi. We don’t just teach students — we mentor
+              future leaders, doctors, engineers, and toppers.
+            </p>
+
+            <div class="about__highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">📈</span>
+                <div>
+                  <strong>Proven Results</strong><br />
+                  <span class="highlight-desc"
+                    >Consistent toppers in JEE, NEET & CUET</span
+                  >
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">👨‍🏫</span>
+                <div>
+                  <strong>Expert Faculty</strong><br />
+                  <span class="highlight-desc"
+                    >IITians, NITians & experienced educators</span
+                  >
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🔗</span>
+                <div>
+                  <strong>School Integration</strong><br />
+                  <span class="highlight-desc"
+                    >Seamless coaching alongside board exams</span
+                  >
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🏛️</span>
+                <div>
+                  <strong>Government Recognized</strong><br />
+                  <span class="highlight-desc"
+                    >Registered under MSME, Govt. of India</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Enhanced Stats -->
+            <div class="about__stats">
+              <div class="stat-card">
+                <div class="stat-card__number">5000+</div>
+                <div class="stat-card__label">Students Trained</div>
+                <div class="stat-card__sub">and counting</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-card__number">95%</div>
+                <div class="stat-card__label">Success Rate</div>
+                <div class="stat-card__sub">in competitive exams</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-card__number">50+</div>
+                <div class="stat-card__label">Expert Faculty</div>
+                <div class="stat-card__sub">from premier institutes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
 
     <!-- Courses Section -->
     <section class="courses" id="courses">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Our Courses</h2>
-                <p class="section__subtitle">Comprehensive Programs Designed for Your Success</p>
-            </div>
-            
-            <div class="courses__grid">
-                <div class="course-card">
-                    <div class="course-card__image placeholder-image"></div>
-                    <div class="course-card__content">
-                        <h3 class="course-card__title">JEE Main & Advanced</h3>
-                        <p class="course-card__description">Comprehensive preparation for engineering entrance exams with personalized mentoring.</p>
-                        <div class="course-card__meta">
-                            <span class="badge">6 Months</span>
-                            <span class="badge badge--secondary">Online & Offline</span>
-                        </div>
-                        <button class="btn btn--secondary btn--sm">Know More</button>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-card__image placeholder-image"></div>
-                    <div class="course-card__content">
-                        <h3 class="course-card__title">NEET Preparation</h3>
-                        <p class="course-card__description">Expert coaching for medical entrance exams with proven track record of success.</p>
-                        <div class="course-card__meta">
-                            <span class="badge">6 Months</span>
-                            <span class="badge badge--secondary">Online & Offline</span>
-                        </div>
-                        <button class="btn btn--secondary btn--sm">Know More</button>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-card__image placeholder-image"></div>
-                    <div class="course-card__content">
-                        <h3 class="course-card__title">Commerce Stream</h3>
-                        <p class="course-card__description">Complete guidance for board exams and competitive entrance preparation in commerce.</p>
-                        <div class="course-card__meta">
-                            <span class="badge">1 Year</span>
-                            <span class="badge badge--secondary">Online & Offline</span>
-                        </div>
-                        <button class="btn btn--secondary btn--sm">Know More</button>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-card__image placeholder-image"></div>
-                    <div class="course-card__content">
-                        <h3 class="course-card__title">Foundation Programs</h3>
-                        <p class="course-card__description">Build strong fundamentals for classes 6-10 with experienced mentors guiding your path.</p>
-                        <div class="course-card__meta">
-                            <span class="badge">1 Year</span>
-                            <span class="badge badge--secondary">Online & Offline</span>
-                        </div>
-                        <button class="btn btn--secondary btn--sm">Know More</button>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-card__image placeholder-image"></div>
-                    <div class="course-card__content">
-                        <h3 class="course-card__title">UPSC Preparation</h3>
-                        <p class="course-card__description">Strategic approach to civil services exams with comprehensive study materials and doubt support.</p>
-                        <div class="course-card__meta">
-                            <span class="badge">18 Months</span>
-                            <span class="badge badge--secondary">Online & Offline</span>
-                        </div>
-                        <button class="btn btn--secondary btn--sm">Know More</button>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-card__image placeholder-image"></div>
-                    <div class="course-card__content">
-                        <h3 class="course-card__title">Skill Development</h3>
-                        <p class="course-card__description">Professional skills training programs to enhance employability and career prospects.</p>
-                        <div class="course-card__meta">
-                            <span class="badge">3-6 Months</span>
-                            <span class="badge badge--secondary">Online & Offline</span>
-                        </div>
-                        <button class="btn btn--secondary btn--sm">Know More</button>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Our Courses</h2>
+          <p class="section__subtitle">
+            Comprehensive Programs Designed for Your Success
+          </p>
         </div>
+
+        <div class="courses__grid">
+          <div class="course-card">
+            <div class="course-card__image placeholder-image"></div>
+            <div class="course-card__content">
+              <h3 class="course-card__title">JEE Main & Advanced</h3>
+              <p class="course-card__description">
+                Comprehensive preparation for engineering entrance exams with
+                personalized mentoring.
+              </p>
+              <div class="course-card__meta">
+                <span class="badge">1 Year</span>
+                <span class="badge badge--secondary">Online & Offline</span>
+              </div>
+              <a href="courses/jee.html" class="btn btn--secondary btn--sm"
+                >Know More</a
+              >
+            </div>
+          </div>
+
+          <div class="course-card">
+            <div class="course-card__image placeholder-image"></div>
+            <div class="course-card__content">
+              <h3 class="course-card__title">NEET Preparation</h3>
+              <p class="course-card__description">
+                Expert coaching for medical entrance exams with proven track
+                record of success.
+              </p>
+              <div class="course-card__meta">
+                <span class="badge">1 Year</span>
+                <span class="badge badge--secondary">Online & Offline</span>
+              </div>
+              <a href="courses/neet.html" class="btn btn--secondary btn--sm"
+                >Know More</a
+              >
+            </div>
+          </div>
+
+          <div class="course-card">
+            <div class="course-card__image placeholder-image"></div>
+            <div class="course-card__content">
+              <h3 class="course-card__title">Foundation Programme</h3>
+              <p class="course-card__description">
+                Build strong fundamentals for classes 6-10 with experienced
+                mentors guiding your path.
+              </p>
+              <div class="course-card__meta">
+                <span class="badge">1 Year</span>
+                <span class="badge badge--secondary">Online & Offline</span>
+              </div>
+              <a
+                href="courses/foundation.html"
+                class="btn btn--secondary btn--sm"
+                >Know More</a
+              >
+            </div>
+          </div>
+
+          <div class="course-card">
+            <div class="course-card__image placeholder-image"></div>
+            <div class="course-card__content">
+              <h3 class="course-card__title">CUET</h3>
+              <p class="course-card__description">
+                Comprehensive preparation for Common University Entrance Test
+                with expert guidance and study materials.
+              </p>
+              <div class="course-card__meta">
+                <span class="badge">1 Year</span>
+                <span class="badge badge--secondary">Online & Offline</span>
+              </div>
+              <a href="courses/cuet.html" class="btn btn--secondary btn--sm"
+                >Know More</a
+              >
+            </div>
+          </div>
+
+          <div class="course-card">
+            <div class="course-card__image placeholder-image"></div>
+            <div class="course-card__content">
+              <h3 class="course-card__title">
+                Olympiad (JSTSE, NTSE, KVPY, etc)
+              </h3>
+              <p class="course-card__description">
+                Specialized coaching for prestigious national olympiad exams
+                with proven success in national competitions.
+              </p>
+              <div class="course-card__meta">
+                <span class="badge">Variable</span>
+                <span class="badge badge--secondary">Online & Offline</span>
+              </div>
+              <a href="courses/olympiad.html" class="btn btn--secondary btn--sm"
+                >Know More</a
+              >
+            </div>
+          </div>
+
+          <div class="course-card">
+            <div class="course-card__image placeholder-image"></div>
+            <div class="course-card__content">
+              <h3 class="course-card__title">Droppers Programme</h3>
+              <p class="course-card__description">
+                Intensive preparation for JEE & NEET aspirants with dedicated
+                focus, advanced study materials, and expert mentorship.
+              </p>
+              <div class="course-card__meta">
+                <span class="badge">1 Year</span>
+                <span class="badge badge--secondary">Online & Offline</span>
+              </div>
+              <a href="courses/droppers.html" class="btn btn--secondary btn--sm"
+                >Know More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Why Choose Us Section -->
     <section class="why-us" id="why-us">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Why Choose Sabal Academy</h2>
-                <p class="section__subtitle">What Sets Us Apart</p>
-            </div>
-            
-            <div class="features__grid">
-                <div class="feature-card">
-                    <div class="feature-card__icon">📚</div>
-                    <h3 class="feature-card__title">Expert Faculty</h3>
-                    <p class="feature-card__description">Learn from industry experts with 15+ years of teaching experience and proven success records.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-card__icon">🎯</div>
-                    <h3 class="feature-card__title">Personalized Learning</h3>
-                    <p class="feature-card__description">Customized learning paths tailored to individual student needs and learning pace.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-card__icon">💻</div>
-                    <h3 class="feature-card__title">Modern Infrastructure</h3>
-                    <p class="feature-card__description">State-of-the-art classrooms, digital learning platforms, and advanced study materials.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-card__icon">📊</div>
-                    <h3 class="feature-card__title">Progress Tracking</h3>
-                    <p class="feature-card__description">Regular assessments and detailed performance reports to monitor and improve progress.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-card__icon">🤝</div>
-                    <h3 class="feature-card__title">Mentorship</h3>
-                    <p class="feature-card__description">One-on-one mentoring sessions to address doubts and provide career guidance.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-card__icon">🏆</div>
-                    <h3 class="feature-card__title">Proven Results</h3>
-                    <p class="feature-card__description">Consistent track record of student success with 95% selection rate in competitive exams.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Why Choose Sabal Academy</h2>
+          <p class="section__subtitle">What Sets Us Apart</p>
         </div>
+
+        <div class="features__grid">
+          <div class="feature-card">
+            <div class="feature-card__icon">📚</div>
+            <h3 class="feature-card__title">Expert Faculty</h3>
+            <p class="feature-card__description">
+              Learn from industry experts with 15+ years of teaching experience
+              and proven success records.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">🎯</div>
+            <h3 class="feature-card__title">Personalized Learning</h3>
+            <p class="feature-card__description">
+              Customized learning paths tailored to individual student needs and
+              learning pace.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">💻</div>
+            <h3 class="feature-card__title">Modern Infrastructure</h3>
+            <p class="feature-card__description">
+              State-of-the-art classrooms, digital learning platforms, and
+              advanced study materials.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">📊</div>
+            <h3 class="feature-card__title">Progress Tracking</h3>
+            <p class="feature-card__description">
+              Regular assessments and detailed performance reports to monitor
+              and improve progress.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">🧠</div>
+            <h3 class="feature-card__title">Clinical Psychologist Support</h3>
+            <p class="feature-card__description">
+              Professional psychological counseling and emotional support for
+              student well-being.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- School Integration Programme Section -->
+    <section class="school-integration" id="school-integration">
+      <div class="container">
+        <div class="section__header">
+          <span class="badge">For Schools & Institutions</span>
+          <h2 class="section__title">School Integration Programme</h2>
+          <p class="section__subtitle">
+            Seamlessly integrate competitive exam preparation with your school
+            curriculum — without disrupting regular classes.
+          </p>
+        </div>
+
+        <div class="sip__wrapper">
+          <!-- Left Content -->
+          <div class="sip__content">
+            <h3 class="sip__heading">A Result-Driven Academic Framework</h3>
+            <p class="sip__text">
+              Designed to give students a competitive edge in exams like JEE,
+              NEET, CUET, and Olympiads, while maintaining strong board
+              performance.
+            </p>
+
+            <ul class="sip__list">
+              <li>✔ Integrated Academic Planning & Timelines</li>
+              <li>✔ Dedicated Faculty from Head Office</li>
+              <li>✔ Continuous Monitoring & Performance Tracking</li>
+              <li>✔ Structured Test Series & Progress Reports</li>
+            </ul>
+
+            <a
+              href="./school-integration/school-integration.html"
+              class="btn btn--primary btn--lg"
+            >
+              Know More →
+            </a>
+          </div>
+
+          <!-- Right Features Cards -->
+          <div class="sip__cards">
+            <div class="feature-card feature-card--highlighted">
+              <div class="feature-card__icon">👨‍🏫</div>
+              <h3 class="feature-card__title">Expert Faculty Recruitment</h3>
+              <p class="feature-card__description">
+                Experienced faculty recruited directly from SABAL ACADEMY Head
+                Office, ensuring consistent teaching quality.
+              </p>
+            </div>
+
+            <div class="feature-card feature-card--highlighted">
+              <div class="feature-card__icon">📊</div>
+              <h3 class="feature-card__title">Monitoring & Control</h3>
+              <p class="feature-card__description">
+                Track syllabus progress, student performance, and academic
+                outcomes with structured systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Student Testimonials</h2>
-                <p class="section__subtitle">Hear From Our Successful Students</p>
-            </div>
-            
-            <div class="testimonials__grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-card__text">
-                        "Sabal Academy completely transformed my approach to learning. The personalized guidance and expert coaching helped me secure AIR 45 in JEE Advanced. Highly recommended!"
-                    </p>
-                    <div class="testimonial-card__author">
-                        <div class="testimonial-card__avatar">AR</div>
-                        <div>
-                            <p class="testimonial-card__name">Arjun Reddy</p>
-                            <p class="testimonial-card__role">JEE Advanced Qualifier</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-card__text">
-                        "The faculty here is exceptional. They don't just teach; they mentor. I never thought I could crack NEET, but with their support and guidance, I scored 680 marks. Thank you!"
-                    </p>
-                    <div class="testimonial-card__author">
-                        <div class="testimonial-card__avatar">PS</div>
-                        <div>
-                            <p class="testimonial-card__name">Priya Singh</p>
-                            <p class="testimonial-card__role">NEET 2024 Topper</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-card__text">
-                        "The online platform is so interactive and engaging. I could learn at my own pace while getting regular feedback. Best investment for my future studies!"
-                    </p>
-                    <div class="testimonial-card__author">
-                        <div class="testimonial-card__avatar">VK</div>
-                        <div>
-                            <p class="testimonial-card__name">Vikram Kumar</p>
-                            <p class="testimonial-card__role">Online Course Student</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Student Testimonials</h2>
+          <p class="section__subtitle">Hear From Our Successful Students</p>
         </div>
+
+        <div class="testimonials__grid">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-card__text">
+              "Sabal Academy completely transformed my approach to learning. The
+              personalized guidance and expert coaching helped me secure AIR 45
+              in JEE Advanced. Highly recommended!"
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">AR</div>
+              <div>
+                <p class="testimonial-card__name">Arjun Reddy</p>
+                <p class="testimonial-card__role">JEE Advanced Qualifier</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-card__text">
+              "The faculty here is exceptional. They don't just teach; they
+              mentor. I never thought I could crack NEET, but with their support
+              and guidance, I scored 680 marks. Thank you!"
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">PS</div>
+              <div>
+                <p class="testimonial-card__name">Priya Singh</p>
+                <p class="testimonial-card__role">NEET 2024 Topper</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-card__text">
+              "The online platform is so interactive and engaging. I could learn
+              at my own pace while getting regular feedback. Best investment for
+              my future studies!"
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">VK</div>
+              <div>
+                <p class="testimonial-card__name">Vikram Kumar</p>
+                <p class="testimonial-card__role">Online Course Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Enquiry Form Section -->
     <section class="enquiry" id="enquiry">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Connect With Us</h2>
-                <p class="section__subtitle">Get More Information About Our Programs</p>
-            </div>
-            
-            <div class="enquiry__wrapper">
-                <form class="enquiry-form" id="enquiryForm">
-                    <div class="form__group">
-                        <label for="name" class="form__label">Full Name</label>
-                        <input type="text" id="name" name="name" class="form__input" placeholder="Your full name" required>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="email" class="form__label">Email Address</label>
-                        <input type="email" id="email" name="email" class="form__input" placeholder="your@email.com" required>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="phone" class="form__label">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" class="form__input" placeholder="Your phone number" required>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="course" class="form__label">Interested Course</label>
-                        <select id="course" name="course" class="form__select" required>
-                            <option value="">Select a course</option>
-                            <option value="jee">JEE Main & Advanced</option>
-                            <option value="neet">NEET Preparation</option>
-                            <option value="commerce">Commerce Stream</option>
-                            <option value="foundation">Foundation Programs</option>
-                            <option value="upsc">UPSC Preparation</option>
-                            <option value="skills">Skill Development</option>
-                        </select>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="message" class="form__label">Message</label>
-                        <textarea id="message" name="message" class="form__textarea" placeholder="Tell us about your educational goals..." rows="4"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn--primary btn--lg">Send Enquiry</button>
-                </form>
-
-                <div class="enquiry__info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-info">
-                        <div class="contact-info__item">
-                            <span class="contact-info__icon">📍</span>
-                            <div>
-                                <p class="contact-info__label">Address</p>
-                                <p class="contact-info__value">123 Education Plaza, New Delhi - 110001, India</p>
-                            </div>
-                        </div>
-                        <div class="contact-info__item">
-                            <span class="contact-info__icon">📞</span>
-                            <div>
-                                <p class="contact-info__label">Phone</p>
-                                <p class="contact-info__value">+91 98765 43210</p>
-                            </div>
-                        </div>
-                        <div class="contact-info__item">
-                            <span class="contact-info__icon">✉️</span>
-                            <div>
-                                <p class="contact-info__label">Email</p>
-                                <p class="contact-info__value">info@sabalisacademy.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-info__item">
-                            <span class="contact-info__icon">🕐</span>
-                            <div>
-                                <p class="contact-info__label">Hours</p>
-                                <p class="contact-info__value">Mon - Sat: 9:00 AM - 6:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Connect With Us</h2>
+          <p class="section__subtitle">
+            Get More Information About Our Programs
+          </p>
         </div>
+
+        <div class="enquiry__wrapper">
+          <form class="enquiry-form" id="enquiryForm">
+            <div class="form__group">
+              <label for="name" class="form__label">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form__input"
+                placeholder="Your full name"
+                required
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="email" class="form__label">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form__input"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="phone" class="form__label">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form__input"
+                placeholder="Your phone number"
+                required
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="course" class="form__label">Interested Course</label>
+              <select id="course" name="course" class="form__select" required>
+                <option value="">Select a course</option>
+                <option value="jee">JEE Main & Advanced</option>
+                <option value="neet">NEET Preparation</option>
+                <option value="foundation">Foundation Programme</option>
+                <option value="cuet">CUET</option>
+                <option value="olympiad">
+                  Olympiad (JSTSE, NTSE, KVPY, etc)
+                </option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label for="message" class="form__label">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form__textarea"
+                placeholder="Tell us about your educational goals..."
+                rows="4"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg">
+              Send Enquiry
+            </button>
+          </form>
+
+          <div class="enquiry__info" id="contact">
+            <h3>Contact Information</h3>
+            <div class="contact-info">
+              <div class="contact-info__item">
+                <span class="contact-info__icon">📍</span>
+                <div>
+                  <p class="contact-info__label">Address</p>
+                  <p class="contact-info__value">
+                     Sector - 3, ROHINI, NEW DELHI
+                  </p>
+                </div>
+              </div>
+              <div class="contact-info__item">
+                <span class="contact-info__icon">📞</span>
+                <div>
+                  <p class="contact-info__label">Phone</p>
+                  <p class="contact-info__value">+91 9654619822</p>
+                </div>
+              </div>
+              <div class="contact-info__item">
+                <span class="contact-info__icon">✉️</span>
+                <div>
+                  <p class="contact-info__label">Email</p>
+                  <p class="contact-info__value">info@sabalisacademy.com</p>
+                </div>
+              </div>
+              <div class="contact-info__item">
+                <span class="contact-info__icon">🕐</span>
+                <div>
+                  <p class="contact-info__label">Hours</p>
+                  <p class="contact-info__value">
+                    Mon - Sat: 9:00 AM - 6:00 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__section">
-                    <h4 class="footer__title">Sabal Academy</h4>
-                    <p class="footer__text">Transforming lives through quality education and expert coaching since 2015.</p>
-                    <div class="footer__social">
-                        <a href="https://facebook.com" class="footer__social-link" title="Facebook" aria-label="Facebook">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                        <a href="https://twitter.com" class="footer__social-link" title="Twitter" aria-label="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.953 4.57a10 10 0 002.856-3.515 9.953 9.953 0 01-2.828.856 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
-                        </a>
-                        <a href="https://linkedin.com" class="footer__social-link" title="LinkedIn" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
-                            </svg>
-                        </a>
-                        <a href="https://instagram.com" class="footer__social-link" title="Instagram" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
-                                <path d="M12 7a5 5 0 100 10 5 5 0 000-10z" fill="none" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer__section">
-                    <h4 class="footer__title">Courses</h4>
-                    <ul class="footer__list">
-                        <li><a href="#courses">JEE Preparation</a></li>
-                        <li><a href="#courses">NEET Coaching</a></li>
-                        <li><a href="#courses">Commerce Stream</a></li>
-                        <li><a href="#courses">UPSC Preparation</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__section">
-                    <h4 class="footer__title">Quick Links</h4>
-                    <ul class="footer__list">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__section">
-                    <h4 class="footer__title">Contact</h4>
-                    <p class="footer__text">📞 +91 98765 43210</p>
-                    <p class="footer__text">✉️ info@sabalisacademy.com</p>
-                    <p class="footer__text">📍 New Delhi, India</p>
-                </div>
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__section">
+            <h4 class="footer__title">Sabal Academy</h4>
+            <p class="footer__text">
+              Transforming lives through quality education and expert coaching
+              since 2015.
+            </p>
+            <div class="footer__social">
+              <a
+                href="https://facebook.com"
+                class="footer__social-link"
+                title="Facebook"
+                aria-label="Facebook"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com"
+                class="footer__social-link"
+                title="Twitter"
+                aria-label="Twitter"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M23.953 4.57a10 10 0 002.856-3.515 9.953 9.953 0 01-2.828.856 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com"
+                class="footer__social-link"
+                title="LinkedIn"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://instagram.com"
+                class="footer__social-link"
+                title="Instagram"
+                aria-label="Instagram"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <rect
+                    x="2"
+                    y="2"
+                    width="20"
+                    height="20"
+                    rx="5"
+                    ry="5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M12 7a5 5 0 100 10 5 5 0 000-10z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+                </svg>
+              </a>
             </div>
+          </div>
 
-            <div class="footer__bottom">
-                <p>&copy; <span id="year">2024</span> Sabal Academy. All rights reserved.</p>
-            </div>
+          <div class="footer__section">
+            <h4 class="footer__title">Courses</h4>
+            <ul class="footer__list">
+              <li><a href="#courses">JEE Main & Advanced</a></li>
+              <li><a href="#courses">NEET Preparation</a></li>
+              <li><a href="#courses">Foundation Programme</a></li>
+              <li><a href="#courses">CUET & Olympiad</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__section">
+            <h4 class="footer__title">Quick Links</h4>
+            <ul class="footer__list">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__section">
+            <h4 class="footer__title">Contact</h4>
+            <p class="footer__text">📞 +91 PHONE - 9654619822</p>
+            <p class="footer__text">✉️ info@sabalisacademy.com</p>
+            <p class="footer__text">
+              📍 Address: Sector - 3, ROHINI, NEW DELHI
+            </p>
+          </div>
         </div>
+
+        <div class="footer__bottom">
+          <p>
+            &copy; <span id="year">2024</span> Sabal Academy. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <!-- Script -->
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

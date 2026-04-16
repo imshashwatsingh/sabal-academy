@@ -1,4 +1,15 @@
 // ===================================
+// DYNAMIC YEAR IN FOOTER
+// ===================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
+
+// ===================================
 // DOM ELEMENTS
 // ===================================
 
