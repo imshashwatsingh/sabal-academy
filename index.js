@@ -1,52 +1,4 @@
 // ===================================
-// DYNAMIC YEAR IN FOOTER
-// ===================================
-
-document.addEventListener('DOMContentLoaded', () => {
-    const yearElement = document.getElementById('year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
-});
-
-// ===================================
-// DOM ELEMENTS
-// ===================================
-
-const navbar = document.getElementById('navbar');
-const navbarToggle = document.getElementById('navbarToggle');
-const navbarMenu = document.getElementById('navbarMenu');
-const navbarLinks = document.querySelectorAll('.navbar__link');
-const enquiryForm = document.getElementById('enquiryForm');
-
-// ===================================
-// NAVBAR FUNCTIONALITY
-// ===================================
-
-// Mobile menu toggle
-navbarToggle.addEventListener('click', () => {
-    navbarToggle.classList.toggle('active');
-    navbarMenu.classList.toggle('active');
-});
-
-// Close mobile menu when a link is clicked
-navbarLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navbarToggle.classList.remove('active');
-        navbarMenu.classList.remove('active');
-    });
-});
-
-// Add shadow to navbar on scroll
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('navbar--scrolled');
-    } else {
-        navbar.classList.remove('navbar--scrolled');
-    }
-});
-
-// ===================================
 // SMOOTH SCROLL TO ELEMENT
 // ===================================
 
@@ -65,122 +17,6 @@ document.querySelectorAll('[data-scroll-to]').forEach(element => {
         }
     });
 });
-
-// ===================================
-// FORM HANDLING
-// ===================================
-
-enquiryForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(enquiryForm);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const phone = formData.get('phone');
-    const course = formData.get('course');
-    const message = formData.get('message');
-    
-    // Validate form
-    if (!name || !email || !phone || !course) {
-        showNotification('Please fill in all required fields', 'error');
-        return;
-    }
-    
-    // Validate email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        showNotification('Please enter a valid email address', 'error');
-        return;
-    }
-    
-    // Validate phone
-    const phoneRegex = /^[0-9\-\+\(\)\s]+$/;
-    if (!phoneRegex.test(phone) || phone.replace(/\D/g, '').length < 10) {
-        showNotification('Please enter a valid phone number', 'error');
-        return;
-    }
-    
-    // In a real application, you would send this data to a server
-    console.log('Form Data:', {
-        name,
-        email,
-        phone,
-        course,
-        message
-    });
-    
-    // Show success message
-    showNotification('Thank you for your enquiry! We will contact you soon.', 'success');
-    
-    // Reset form
-    enquiryForm.reset();
-});
-
-// ===================================
-// NOTIFICATION SYSTEM
-// ===================================
-
-function showNotification(text, type = 'info') {
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = `notification notification--${type}`;
-    notification.textContent = text;
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background-color: ${type === 'success' ? '#2FA084' : type === 'error' ? '#d32f2f' : '#1F6F5F'};
-        color: white;
-        padding: 16px 24px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        z-index: 9999;
-        animation: slideInRight 0.3s ease-out;
-        font-weight: 500;
-        max-width: 400px;
-    `;
-    
-    // Add animation styles if not already present
-    if (!document.querySelector('style[data-notification]')) {
-        const style = document.createElement('style');
-        style.setAttribute('data-notification', 'true');
-        style.textContent = `
-            @keyframes slideInRight {
-                from {
-                    opacity: 0;
-                    transform: translateX(100px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-            @keyframes slideOutRight {
-                from {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-                to {
-                    opacity: 0;
-                    transform: translateX(100px);
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-    
-    // Add to DOM
-    document.body.appendChild(notification);
-    
-    // Remove after 4 seconds
-    setTimeout(() => {
-        notification.style.animation = 'slideOutRight 0.3s ease-out';
-        setTimeout(() => {
-            notification.remove();
-        }, 300);
-    }, 4000);
-}
 
 // ===================================
 // INTERSECTION OBSERVER FOR ANIMATIONS
@@ -283,18 +119,6 @@ document.querySelectorAll('.btn').forEach(button => {
 });
 
 // ===================================
-// KEYBOARD NAVIGATION
-// ===================================
-
-// Close mobile menu on Escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        navbarToggle.classList.remove('active');
-        navbarMenu.classList.remove('active');
-    }
-});
-
-// ===================================
 // ACCESSIBILITY - FOCUS VISIBLE
 // ===================================
 
@@ -329,55 +153,6 @@ if (!document.querySelector('style[data-a11y]')) {
 window.addEventListener('load', () => {
     document.body.style.opacity = '1';
 });
-
-// ===================================
-// PERFORMANCE OPTIMIZATION
-// ===================================
-
-// Debounce scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Optimize navbar shadow update
-const updateNavbarShadow = debounce(() => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('navbar--scrolled');
-    } else {
-        navbar.classList.remove('navbar--scrolled');
-    }
-}, 10);
-
-window.removeEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('navbar--scrolled');
-    } else {
-        navbar.classList.remove('navbar--scrolled');
-    }
-});
-
-window.addEventListener('scroll', updateNavbarShadow, { passive: true });
-
-// ===================================
-// INIT MESSAGE
-// ===================================
-
-// ===================================
-// DYNAMIC YEAR IN FOOTER
-// ===================================
-
-const yearElement = document.getElementById('year');
-if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-}
 
 // ===================================
 // CONSOLE MESSAGES

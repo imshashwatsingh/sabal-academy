@@ -3,48 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="NEET Medical Entrance Exam Coaching at Sabal Academy" />
-    <meta name="keywords" content="NEET, Medical Entrance, AIIMS, NEET Coaching" />
+    <meta
+      name="description"
+      content="NEET Medical Entrance Exam Coaching at Sabal Academy"
+    />
+    <meta
+      name="keywords"
+      content="NEET, Medical Entrance, AIIMS, NEET Coaching"
+    />
     <meta name="author" content="Sabal Academy" />
     <meta name="theme-color" content="#1F6F5F" />
     <title>NEET Preparation Coaching - Sabal Academy</title>
-     <!-- Favicon -->
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/svg+xml"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231F6F5F' width='100' height='100'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>SA</text></svg>"
     />
     <link rel="stylesheet" href="../styles/style.css" />
+    <!-- Web Components -->
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../components/enquiry-form.js"></script>
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar" id="navbar">
-      <div class="navbar__container">
-        <div class="navbar__logo">
-          <span class="navbar__logo-icon">SA</span>
-          <span class="navbar__logo-text">Sabal Academy</span>
-        </div>
-        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu">
-          <span class="navbar__toggle-line"></span>
-          <span class="navbar__toggle-line"></span>
-          <span class="navbar__toggle-line"></span>
-        </button>
-        <ul class="navbar__menu" id="navbarMenu">
-          <li class="navbar__item"><a href="../index.html" class="navbar__link">Home</a></li>
-          <li class="navbar__item"><a href="../index.html#courses" class="navbar__link">Courses</a></li>
-          <li class="navbar__item"><a href="../index.html#why-us" class="navbar__link">Why Us</a></li>
-          <li class="navbar__item"><a href="../school-integration/school-integration.html" class="navbar__link">School Integration</a></li>
-          <li class="navbar__item"><a href="../index.html#contact" class="navbar__link">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <sabal-navbar base-path=".."></sabal-navbar>
 
     <!-- Course Hero Section -->
     <section class="course-hero">
       <div class="container">
         <h1 class="course-hero__title">NEET Medical Entrance Preparation</h1>
         <p class="course-hero__subtitle">Your Pathway to Medical Excellence</p>
-        <p class="course-hero__description">Comprehensive coaching for NEET with highest selection rates and expert guidance</p>
+        <p class="course-hero__description">
+          Comprehensive coaching for NEET with highest selection rates and
+          expert guidance
+        </p>
+      </div>
+    </section>
+
+    <!-- About NEET -->
+    <section class="about-course">
+      <div class="container">
+        <div style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          <div>
+            <h2 class="course-section__title" style="font-size: 1.5rem;">About NEET & AIIMS</h2>
+            <p class="course-section__text">
+              AIIMS and NEET represent the benchmark for medical entrance examinations in India. AIIMS examinations are conducted independently by the institute, while NEET (National Eligibility cum Entrance Test) is overseen by regulatory bodies. 
+              We recommend checking <a href="https://www.aiimsexams.org" target="_blank" rel="noopener noreferrer">www.aiimsexams.org</a> and <a href="https://www.cbseneet.nic.in" target="_blank" rel="noopener noreferrer">www.cbseneet.nic.in</a> for the latest official updates.
+            </p>
+          </div>
+          <div>
+            <h2 class="course-section__title" style="font-size: 1.5rem;">Our Role & Approach</h2>
+            <p class="course-section__text">
+              We provide structured guidance and focused preparation for AIIMS, NEET, and board examinations. With premier medical institutes offering limited seats for thousands of aspirants worldwide, our goal is to build strong foundations, provide strategic insights, and offer the dedicated support necessary to help students achieve their medical ambitions.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -54,12 +69,18 @@
         <div class="course-section">
           <h2 class="course-section__title">About the Course</h2>
           <p class="course-section__text">
-            Our NEET preparation program is built on proven strategies and comprehensive curriculum coverage. With a 96% question match rate in recent exams, our expert faculty guides students through Biology, Chemistry, and Physics with personalized attention and regular progress tracking.
+            Our NEET preparation program is built on proven strategies and
+            comprehensive curriculum coverage. With a 96% question match rate in
+            recent exams, our expert faculty guides students through Biology,
+            Chemistry, and Physics with personalized attention and regular
+            progress tracking.
           </p>
           <div class="course-highlights">
             <div class="highlight-item">
               <span class="highlight-icon">✓</span>
-              <span class="highlight-text">96% Questions from Our Study Material</span>
+              <span class="highlight-text"
+                >96% Questions from Our Study Material</span
+              >
             </div>
             <div class="highlight-item">
               <span class="highlight-icon">✓</span>
@@ -85,12 +106,16 @@
           <div class="detail-card">
             <h3 class="detail-card__title">Duration</h3>
             <p class="detail-card__value">1 Year / 2 Years</p>
-            <p class="detail-card__desc">Flexible batches for different requirements</p>
+            <p class="detail-card__desc">
+              Flexible batches for different requirements
+            </p>
           </div>
           <div class="detail-card">
             <h3 class="detail-card__title">Batch Size</h3>
             <p class="detail-card__value">Limited to 30</p>
-            <p class="detail-card__desc">Personalized attention for every student</p>
+            <p class="detail-card__desc">
+              Personalized attention for every student
+            </p>
           </div>
           <div class="detail-card">
             <h3 class="detail-card__title">Mode</h3>
@@ -106,153 +131,191 @@
       </div>
     </section>
 
-    <!-- Curriculum -->
-    <!-- <section class="course-curriculum">
+    <section class="about-course">
       <div class="container">
-        <h2 class="section__title">Curriculum</h2>
-        <div class="curriculum-grid">
-          <div class="curriculum-subject">
-            <h3 class="curriculum-subject__title">Physics</h3>
-            <ul class="curriculum-subjects__list">
-              <li>Mechanics & Fluids</li>
-              <li>Thermodynamics</li>
-              <li>Optics & Light</li>
-              <li>Modern Physics</li>
-              <li>Waves & Oscillations</li>
-            </ul>
-          </div>
-          <div class="curriculum-subject">
-            <h3 class="curriculum-subject__title">Chemistry</h3>
-            <ul class="curriculum-subjects__list">
-              <li>Organic Chemistry</li>
-              <li>Inorganic Chemistry</li>
-              <li>Physical Chemistry</li>
-              <li>Biomolecules & Reactions</li>
-              <li>Analytical Chemistry</li>
-            </ul>
-          </div>
-          <div class="curriculum-subject">
-            <h3 class="curriculum-subject__title">Biology</h3>
-            <ul class="curriculum-subjects__list">
-              <li>Cell Biology & Genetics</li>
-              <li>Human Physiology</li>
-              <li>Ecology & Environment</li>
-              <li>Botany & Zoology</li>
-              <li>Medical Related Topics</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section> -->
+        <h2 class="course-section__title">
+          Eligibility Criteria For NEET/AIIMS
+        </h2>
+        
+        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 0.5rem;">AIIMS MBBS Examination</h3>
+        <p class="course-section__text" style="margin-bottom: 1rem;">
+          A candidate must fulfill the criteria given below before applying for AIIMS MBBS examination:
+        </p>
+        <ul class="curriculum-subjects__list" style="margin-bottom: 2rem;">
+          <li><strong>Nationality:</strong> The candidate must be of Indian origin. Overseas Citizen of India (OCI) candidates must submit registration proof under Section 7A of Indian Citizenship Act 1955.</li>
+          <li><strong>Age limit:</strong> Must have completed a minimum of 17 years of age.</li>
+          <li><strong>Education:</strong> Should have appeared and passed 12th board exam (or equivalent recognised by AIIMS Delhi).</li>
+          <li><strong>Subjects:</strong> Mandatory to have studied Physics, Chemistry, Biology, and English in 11th and 12th class.</li>
+          <li><strong>Marks Required:</strong> General and OBC categories must have secured a minimum of 60% aggregate marks in the above subjects. SC, ST, and OPH categories are entitled to a relaxation of 10% (minimum 50%).</li>
+        </ul>
 
-    <!-- Enquiry Form -->
-    <!-- <section class="course-enquiry">
-      <div class="container">
-        <h2 class="section__title">Interested? Enquire Now</h2>
-        <form class="enquiry-form" style="max-width: 600px; margin: 0 auto;">
-          <div class="form__group">
-            <label for="name" class="form__label">Full Name</label>
-            <input type="text" id="name" name="name" class="form__input" placeholder="Your full name" required />
-          </div>
-          <div class="form__group">
-            <label for="email" class="form__label">Email Address</label>
-            <input type="email" id="email" name="email" class="form__input" placeholder="your@email.com" required />
-          </div>
-          <div class="form__group">
-            <label for="phone" class="form__label">Phone Number</label>
-            <input type="tel" id="phone" name="phone" class="form__input" placeholder="Your phone number" required />
-          </div>
-          <div class="form__group">
-            <label for="message" class="form__label">Message</label>
-            <textarea id="message" name="message" class="form__textarea" placeholder="Tell us your goals..." rows="4"></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--lg">Send Enquiry</button>
-        </form>
+        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-color); margin-top: 2rem; margin-bottom: 0.5rem;">NEET (National Eligibility cum Entrance Test)</h3>
+        <p class="course-section__text" style="margin-bottom: 1rem;">
+          NEET is an entrance exam for admission to about 54,000 MBBS / BDS seats across India. A candidate must fulfill the criteria given below before applying:
+        </p>
+        <ul class="curriculum-subjects__list">
+          <li><strong>Nationality:</strong> Must be an Indian citizen.</li>
+          <li><strong>Age limit:</strong> The upper age limit is 25 years (relaxed by 5 years for SC / ST / OBC categories).</li>
+          <li><strong>Education:</strong> Passed 12th examination with subjects Physics, Chemistry, Biology / Biotechnology, and English individually.</li>
+          <li><strong>Marks Required:</strong> Minimum 50% marks in aggregate. For SC / ST / OBC categories, marks obtained in Physics, Chemistry and Biology / Biotechnology taken together in HSC is 40%.</li>
+        </ul>
       </div>
-    </section> -->
+    </section>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__content">
-          <div class="footer__section">
-            <h4 class="footer__title">Sabal Academy</h4>
-            <p class="footer__text">Empowering futures through quality education since 2015.</p>
-          </div>
-          <div class="footer__section">
-            <h4 class="footer__title">Quick Links</h4>
-            <ul class="footer__list">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../index.html#courses">Courses</a></li>
-              <li><a href="../index.html#about">About</a></li>
-            </ul>
-          </div>
-          <div class="footer__section">
-            <h4 class="footer__title">Contact</h4>
-            <p class="footer__text">📞 +91 9654619822</p>
-            <p class="footer__text">📍 Sector-3, Rohini, New Delhi</p>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <p>&copy; <span id="year">2024</span> Sabal Academy. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <sabal-footer base-path=".."></sabal-footer>
 
     <script src="../index.js"></script>
     <style>
       .course-hero {
-        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
         color: white;
         padding: 4rem 2rem;
         text-align: center;
       }
-      .course-hero__title { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 700; }
-      .course-hero__subtitle { font-size: 1.5rem; margin-bottom: 0.5rem; opacity: 0.9; }
-      .course-hero__description { font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.85; }
-      
-      .course-overview { padding: 3rem 0; background-color: var(--light-gray); }
-      .course-section__title { font-size: 2rem; margin-bottom: 1.5rem; color: var(--primary-color); }
-      .course-section__text { font-size: 1rem; color: var(--text-light); line-height: 1.8; margin-bottom: 2rem; }
-      
-      .course-highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-      .highlight-item { 
-        background: white; 
-        padding: 1.5rem; 
-        border-radius: 0.75rem; 
-        display: flex; 
+      .course-hero__title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+      .course-hero__subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        opacity: 0.9;
+      }
+      .course-hero__description {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+        opacity: 0.85;
+      }
+
+      .course-overview {
+        padding: 3rem 0;
+        background-color: var(--light-gray);
+      }
+      .course-section__title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+      }
+      .course-section__text {
+        font-size: 1rem;
+        color: var(--text-light);
+        line-height: 1.8;
+        margin-bottom: 2rem;
+      }
+
+      .course-highlights {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .highlight-item {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        display: flex;
         gap: 1rem;
         box-shadow: var(--shadow-sm);
       }
-      .highlight-icon { color: var(--accent-color); font-size: 1.5rem; font-weight: 700; }
-      .highlight-text { color: var(--text-dark); line-height: 1.6; }
-      
-      .course-details { padding: 3rem 0; background-color: white; }
-      .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
-      .detail-card { 
+      .highlight-icon {
+        color: var(--accent-color);
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .highlight-text {
+        color: var(--text-dark);
+        line-height: 1.6;
+      }
+
+      .course-details {
+        padding: 3rem 0;
+        background-color: white;
+      }
+      .details-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+      }
+      .detail-card {
         background: var(--light-gray);
         padding: 2rem;
         border-radius: 0.75rem;
         text-align: center;
         border-top: 3px solid var(--accent-color);
       }
-      .detail-card__title { font-size: 1rem; color: var(--text-muted); margin-bottom: 0.5rem; }
-      .detail-card__value { font-size: 1.8rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem; }
-      .detail-card__desc { font-size: 0.9rem; color: var(--text-light); }
-      
-      .course-curriculum { padding: 3rem 0; background-color: var(--light-gray); }
-      .curriculum-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
-      .curriculum-subject { background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: var(--shadow-sm); }
-      .curriculum-subject__title { font-size: 1.25rem; color: var(--primary-color); margin-bottom: 1rem; font-weight: 700; }
-      .curriculum-subjects__list { list-style: none; }
-      .curriculum-subjects__list li { padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-light); }
-      .curriculum-subjects__list li:before { content: "→"; position: absolute; left: 0; color: var(--accent-color); font-weight: bold; }
-      
-      .course-enquiry { padding: 3rem 0; background-color: white; }
-      
+      .detail-card__title {
+        font-size: 1rem;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+      }
+      .detail-card__value {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+      .detail-card__desc {
+        font-size: 0.9rem;
+        color: var(--text-light);
+      }
+
+      .course-curriculum {
+        padding: 3rem 0;
+        background-color: var(--light-gray);
+      }
+      .curriculum-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .curriculum-subject {
+        background: white;
+        padding: 2rem;
+        border-radius: 0.75rem;
+        box-shadow: var(--shadow-sm);
+      }
+      .curriculum-subject__title {
+        font-size: 1.25rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+      .curriculum-subjects__list {
+        list-style: none;
+      }
+      .curriculum-subjects__list li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        color: var(--text-light);
+      }
+      .curriculum-subjects__list li:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--accent-color);
+        font-weight: bold;
+      }
+
+      .course-enquiry {
+        padding: 3rem 0;
+        background-color: white;
+      }
+
       @media (max-width: 768px) {
-        .course-hero__title { font-size: 1.8rem; }
-        .course-hero__subtitle { font-size: 1.2rem; }
+        .course-hero__title {
+          font-size: 1.8rem;
+        }
+        .course-hero__subtitle {
+          font-size: 1.2rem;
+        }
       }
     </style>
   </body>

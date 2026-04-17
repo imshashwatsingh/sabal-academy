@@ -15,30 +15,14 @@
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231F6F5F' width='100' height='100'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>SA</text></svg>"
     />
     <link rel="stylesheet" href="../styles/style.css" />
-   
+    <!-- Web Components -->
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../components/enquiry-form.js"></script>
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar" id="navbar">
-      <div class="navbar__container">
-        <div class="navbar__logo">
-          <span class="navbar__logo-icon">SA</span>
-          <span class="navbar__logo-text">Sabal Academy</span>
-        </div>
-        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu">
-          <span class="navbar__toggle-line"></span>
-          <span class="navbar__toggle-line"></span>
-          <span class="navbar__toggle-line"></span>
-        </button>
-        <ul class="navbar__menu" id="navbarMenu">
-          <li class="navbar__item"><a href="../index.html" class="navbar__link">Home</a></li>
-          <li class="navbar__item"><a href="../index.html#courses" class="navbar__link">Courses</a></li>
-          <li class="navbar__item"><a href="../index.html#why-us" class="navbar__link">Why Us</a></li>
-          <li class="navbar__item"><a href="../index.html#school-integration" class="navbar__link">About</a></li>
-          <li class="navbar__item"><a href="#enquiry" class="navbar__link">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <sabal-navbar base-path=".."></sabal-navbar>
 
     <!-- Hero Section -->
     <section class="sip-hero">
@@ -238,76 +222,14 @@
         <h2 class="sip-cta__title">Ready to Transform Your School's Academic Future?</h2>
         <p class="sip-cta__text">Partner with Sabal Academy and give your students a competitive edge while maintaining school excellence.</p>
         
-        <form class="enquiry-form" style="max-width: 700px; margin: 2rem auto;">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div class="form__group">
-              <label for="school-name" class="form__label">School Name</label>
-              <input type="text" id="school-name" name="school_name" class="form__input" placeholder="Your school name" required />
-            </div>
-            <div class="form__group">
-              <label for="principal-name" class="form__label">Principal Name</label>
-              <input type="text" id="principal-name" name="principal_name" class="form__input" placeholder="Principal's name" required />
-            </div>
-          </div>
-          
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div class="form__group">
-              <label for="email" class="form__label">Email Address</label>
-              <input type="email" id="email" name="email" class="form__input" placeholder="school@email.com" required />
-            </div>
-            <div class="form__group">
-              <label for="phone" class="form__label">Phone Number</label>
-              <input type="tel" id="phone" name="phone" class="form__input" placeholder="Your phone number" required />
-            </div>
-          </div>
-
-          <div class="form__group">
-            <label for="classes" class="form__label">Classes Interested In</label>
-            <select id="classes" name="classes" class="form__select" required>
-              <option value="">Select classes</option>
-              <option value="9-10">Classes 9-10</option>
-              <option value="11-12">Classes 11-12</option>
-              <option value="both">Both 9-12</option>
-            </select>
-          </div>
-
-          <div class="form__group">
-            <label for="message" class="form__label">Message</label>
-            <textarea id="message" name="message" class="form__textarea" placeholder="Tell us about your school and requirements..." rows="4"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">Send Partnership Enquiry</button>
-        </form>
+        <div style="max-width: 700px; margin: 2rem auto;">
+          <sabal-enquiry-form></sabal-enquiry-form>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__content">
-          <div class="footer__section">
-            <h4 class="footer__title">Sabal Academy</h4>
-            <p class="footer__text">Empowering futures through quality education since 2015.</p>
-          </div>
-          <div class="footer__section">
-            <h4 class="footer__title">Quick Links</h4>
-            <ul class="footer__list">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../index.html#courses">Courses</a></li>
-              <li><a href="../index.html#why-us">Why Us</a></li>
-            </ul>
-          </div>
-          <div class="footer__section">
-            <h4 class="footer__title">Contact</h4>
-            <p class="footer__text">📞 +91 9654619822</p>
-            <p class="footer__text">📍 Sector-3, Rohini, New Delhi</p>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <p>&copy; <span id="year">2024</span> Sabal Academy. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <sabal-footer base-path=".."></sabal-footer>
 
     <script src="../index.js"></script>
     <style>
