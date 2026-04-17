@@ -15,29 +15,15 @@
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231F6F5F' width='100' height='100'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>SA</text></svg>"
     />
     <link rel="stylesheet" href="../styles/style.css" />
+    <!-- Web Components -->
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../components/enquiry-form.js"></script>
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar" id="navbar">
-      <div class="navbar__container">
-        <div class="navbar__logo">
-          <span class="navbar__logo-icon">SA</span>
-          <span class="navbar__logo-text">Sabal Academy</span>
-        </div>
-        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu">
-          <span class="navbar__toggle-line"></span>
-          <span class="navbar__toggle-line"></span>
-          <span class="navbar__toggle-line"></span>
-        </button>
-        <ul class="navbar__menu" id="navbarMenu">
-          <li class="navbar__item"><a href="../index.html" class="navbar__link">Home</a></li>
-          <li class="navbar__item"><a href="../index.html#courses" class="navbar__link">Courses</a></li>
-          <li class="navbar__item"><a href="../index.html#why-us" class="navbar__link">Why Us</a></li>
-          <li class="navbar__item"><a href="../school-integration/school-integration.html" class="navbar__link">School Integration</a></li>
-          <li class="navbar__item"><a href="../index.html#contact" class="navbar__link">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <!-- Navigation Bar -->
+    <sabal-navbar base-path=".."></sabal-navbar>
 
     <!-- Course Hero Section -->
     <section class="course-hero">
@@ -172,33 +158,8 @@
     </section> -->
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__content">
-          <div class="footer__section">
-            <h4 class="footer__title">Sabal Academy</h4>
-            <p class="footer__text">Empowering futures through quality education since 2015
-                .</p>
-          </div>
-          <div class="footer__section">
-            <h4 class="footer__title">Quick Links</h4>
-            <ul class="footer__list">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../index.html#courses">Courses</a></li>
-              <li><a href="../index.html#about">About</a></li>
-            </ul>
-          </div>
-          <div class="footer__section">
-            <h4 class="footer__title">Contact</h4>
-            <p class="footer__text">📞 +91 9654619822</p>
-            <p class="footer__text">📍 Sector-3, Rohini, New Delhi</p>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <p>&copy; <span id="year">2024</span> Sabal Academy. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <!-- Footer -->
+    <sabal-footer base-path=".."></sabal-footer>
 
     <script src="../index.js"></script>
     <style>

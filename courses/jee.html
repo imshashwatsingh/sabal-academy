@@ -15,29 +15,15 @@
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231F6F5F' width='100' height='100'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>SA</text></svg>"
     />
     <link rel="stylesheet" href="../styles/style.css" />
+    <!-- Web Components -->
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../components/enquiry-form.js"></script>
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar" id="navbar">
-      <div class="navbar__container">
-        <div class="navbar__logo">
-          <span class="navbar__logo-icon">SA</span>
-          <span class="navbar__logo-text">Sabal Academy</span>
-        </div>
-        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu">
-          <span class="navbar__toggle-line"></span>
-          <span class="navbar__toggle-line"></span>
-          <span class="navbar__toggle-line"></span>
-        </button>
-        <ul class="navbar__menu" id="navbarMenu">
-          <li class="navbar__item"><a href="../index.html" class="navbar__link">Home</a></li>
-          <li class="navbar__item"><a href="../index.html#courses" class="navbar__link">Courses</a></li>
-          <li class="navbar__item"><a href="../index.html#why-us" class="navbar__link">Why Us</a></li>
-          <li class="navbar__item"><a href="../school-integration/school-integration.html" class="navbar__link">School Integration</a></li>
-          <li class="navbar__item"><a href="../index.html#contact" class="navbar__link">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <!-- Navigation Bar -->
+    <sabal-navbar base-path=".."></sabal-navbar>
 
     <!-- Course Hero Section -->
     <section class="course-hero">
@@ -45,6 +31,54 @@
         <h1 class="course-hero__title">JEE Main & Advanced Coaching</h1>
         <p class="course-hero__subtitle">Comprehensive Preparation for Engineering Excellence</p>
         <p class="course-hero__description">Master Mathematics, Physics & Chemistry with expert faculty and proven methodologies</p>
+      </div>
+    </section>
+
+    <!-- About JEE -->
+    <section class="about-course">
+      <div class="container">
+        <div style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-bottom: 3rem;">
+          <div>
+            <h2 class="course-section__title" style="font-size: 1.5rem;">About IIT JEE</h2>
+            <p class="course-section__text">
+              The Joint Entrance Examination (JEE) is India's premier engineering entrance assessment, organized in two stages: Main & Advanced. While JEE Main is presently conducted at the national level, the Advanced examination is rotated among the IITs. With over 1.2 million students appearing annually, competition is intense. You are advised to check the official websites <a href="https://jeemain.nta.nic.in/" target="_blank" rel="noopener noreferrer">JEE Main</a> and <a href="https://jeeadv.ac.in/" target="_blank" rel="noopener noreferrer">JEE Advanced</a> for the latest updates.
+            </p>
+          </div>
+          <div>
+            <h2 class="course-section__title" style="font-size: 1.5rem;">Our Approach</h2>
+            <p class="course-section__text">
+              Recognizing the intensity of this competition, we ensure a fine balance between focused IIT JEE preparation and stellar Board Exam results. By identifying each student's potential early on, we create tailored strategies to maintain steady focus and confidence.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="course-section__title" style="font-size: 1.5rem;">Important Guidelines for IIT JEE</h2>
+        <p class="course-section__text" style="margin-bottom: 1rem;">
+          The Government of India has notified the following changes in the JEE pattern:
+        </p>
+        <ul class="curriculum-subjects__list" style="margin-bottom: 2rem;">
+          <li>There is no weightage for 12th class marks in calculating the ranking for the JEE Main examination.</li>
+          <li>To qualify for admission into IITs, NITs, IIITs, and other CFTIs based on JEE ranks, candidates must secure at least 75% marks in their 12th class exams (or be in the top 20 percentile). For SC/ST students, the qualifying mark is relaxed to 65%.</li>
+        </ul>
+
+        <h2 class="course-section__title" style="font-size: 1.5rem;">Our Track Record</h2>
+        <p class="course-section__text" style="margin-bottom: 1rem;">
+          Our commitment over the past half-decade has consistently rewarded our students, setting a strong foundation for their engineering careers:
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow-sm); text-align: center; border-bottom: 3px solid var(--primary-color);">
+            <h4 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0.5rem;">70%+</h4>
+            <p style="font-size: 0.9rem; color: var(--text-light);">Selection in JEE-Mains</p>
+          </div>
+          <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow-sm); text-align: center; border-bottom: 3px solid var(--primary-color);">
+            <h4 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0.5rem;">60%+</h4>
+            <p style="font-size: 0.9rem; color: var(--text-light);">Students Above 90% in Boards</p>
+          </div>
+          <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--shadow-sm); text-align: center; border-bottom: 3px solid var(--primary-color);">
+            <h4 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0.5rem;">30%+</h4>
+            <p style="font-size: 0.9rem; color: var(--text-light);">Students Above 95% in Boards</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -172,32 +206,8 @@
     </section> -->
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__content">
-          <div class="footer__section">
-            <h4 class="footer__title">Sabal Academy</h4>
-            <p class="footer__text">Empowering futures through quality education since 2015.</p>
-          </div>
-          <div class="footer__section">
-            <h4 class="footer__title">Quick Links</h4>
-            <ul class="footer__list">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../index.html#courses">Courses</a></li>
-              <li><a href="../index.html#about">About</a></li>
-            </ul>
-          </div>
-          <div class="footer__section">
-            <h4 class="footer__title">Contact</h4>
-            <p class="footer__text">📞 +91 9654619822</p>
-            <p class="footer__text">📍 Sector-3, Rohini, New Delhi</p>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <p>&copy; <span id="year">2024</span> Sabal Academy. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <!-- Footer -->
+    <sabal-footer base-path=".."></sabal-footer>
 
     <script src="../index.js"></script>
     <style>
