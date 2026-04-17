@@ -12,13 +12,22 @@ class Navbar extends HTMLElement {
         return `${basePath}/${hash}`;
     };
 
+    // Inject favicon dynamically (DRY Principle)
+    let favicon = document.querySelector("link[rel~='icon']");
+    if (!favicon) {
+        favicon = document.createElement('link');
+        favicon.rel = 'icon';
+        document.head.appendChild(favicon);
+    }
+    favicon.href = `${basePath}/assets/images/logo-white.jpeg`;
+
     this.innerHTML = `
       <nav class="navbar" id="navbar">
         <div class="navbar__container">
-          <div class="navbar__logo">
-            <span class="navbar__logo-icon">SA</span>
+          <a href="${getLink('#home')}" class="navbar__logo" style="text-decoration: none;" aria-label="Sabal Academy Home">
+            <img src="${basePath}/assets/images/logo-white.jpeg" alt="Sabal Academy Logo" style="height: 70px; width: auto; object-fit: contain; mix-blend-mode: multiply;" />
             <span class="navbar__logo-text">Sabal Academy</span>
-          </div>
+          </a>
 
           <button
             class="navbar__toggle"
