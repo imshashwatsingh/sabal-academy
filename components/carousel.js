@@ -1,8 +1,8 @@
 class SabalCarousel extends HTMLElement {
   connectedCallback() {
-      // Determine base path to assets based on document location if needed, 
-      // but this is mostly on index.html so 'assets/' is fine.
-      this.innerHTML = `
+    // Determine base path to assets based on document location if needed,
+    // but this is mostly on index.html so 'assets/' is fine.
+    this.innerHTML = `
         <style>
         .sabal-carousel {
             position: relative;
@@ -21,7 +21,7 @@ class SabalCarousel extends HTMLElement {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             opacity: 0;
-            transition: opacity 2.5s ease-in-out;
+            transition: opacity 3.5s ease-in-out;
             z-index: 1;
         }
         .carousel__slide.active {
@@ -31,7 +31,7 @@ class SabalCarousel extends HTMLElement {
         .carousel__slide img {
             width: 100%;
             height: 100%;
-            object-fit: cover; // this is the key to make it responsive
+            object-fit: cover; /* this is the key to make it responsive */
             object-position: center;
         }
         .carousel__overlay {
@@ -121,6 +121,7 @@ class SabalCarousel extends HTMLElement {
             transform: scale(1.3);
         }
         @media (max-width: 768px) {
+            .sabal-carousel { height: 60vh; min-height: 400px; }
             .carousel__title { font-size: 2rem; }
             .carousel__subtitle { font-size: 1rem; }
             .carousel__control { width: 45px; height: 45px; font-size: 1.2rem; }
@@ -156,72 +157,72 @@ class SabalCarousel extends HTMLElement {
         </div>
       `;
 
-      this.initScripts();
+    this.initScripts();
   }
 
   initScripts() {
-      const slides = this.querySelectorAll('.carousel__slide');
-      const dots = this.querySelectorAll('.carousel__dot');
-      const prevBtn = this.querySelector('.carousel__control--prev');
-      const nextBtn = this.querySelector('.carousel__control--next');
-      const scrollBtn = this.querySelector('[data-scroll-to]');
-      
-      let currentSlide = 0;
-      let slideInterval;
+    const slides = this.querySelectorAll(".carousel__slide");
+    const dots = this.querySelectorAll(".carousel__dot");
+    const prevBtn = this.querySelector(".carousel__control--prev");
+    const nextBtn = this.querySelector(".carousel__control--next");
+    const scrollBtn = this.querySelector("[data-scroll-to]");
 
-      const goToSlide = (index) => {
-          slides[currentSlide].classList.remove('active');
-          dots[currentSlide].classList.remove('active');
-          
-          currentSlide = (index + slides.length) % slides.length;
-          
-          slides[currentSlide].classList.add('active');
-          dots[currentSlide].classList.add('active');
-      };
+    let currentSlide = 0;
+    let slideInterval;
 
-      const nextSlide = () => goToSlide(currentSlide + 1);
-      const prevSlide = () => goToSlide(currentSlide - 1);
+    const goToSlide = (index) => {
+      slides[currentSlide].classList.remove("active");
+      dots[currentSlide].classList.remove("active");
 
-      const startAutoPlay = () => {
-          slideInterval = setInterval(nextSlide, 10000);
-      };
+      currentSlide = (index + slides.length) % slides.length;
 
-      const resetAutoPlay = () => {
-          clearInterval(slideInterval);
-          startAutoPlay();
-      };
+      slides[currentSlide].classList.add("active");
+      dots[currentSlide].classList.add("active");
+    };
 
-      // Event Listeners
-      prevBtn.addEventListener('click', () => {
-          prevSlide();
-          resetAutoPlay();
-      });
+    const nextSlide = () => goToSlide(currentSlide + 1);
+    const prevSlide = () => goToSlide(currentSlide - 1);
 
-      nextBtn.addEventListener('click', () => {
-          nextSlide();
-          resetAutoPlay();
-      });
+    const startAutoPlay = () => {
+      slideInterval = setInterval(nextSlide, 10000);
+    };
 
-      dots.forEach((dot, index) => {
-          dot.addEventListener('click', () => {
-              goToSlide(index);
-              resetAutoPlay();
-          });
-      });
-
-      // Keyboard support
-      document.addEventListener('keydown', (e) => {
-          if(e.key === 'ArrowLeft') {
-              prevSlide();
-              resetAutoPlay();
-          } else if(e.key === 'ArrowRight') {
-              nextSlide();
-              resetAutoPlay();
-          }
-      });
-
+    const resetAutoPlay = () => {
+      clearInterval(slideInterval);
       startAutoPlay();
+    };
+
+    // Event Listeners
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      resetAutoPlay();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      resetAutoPlay();
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        goToSlide(index);
+        resetAutoPlay();
+      });
+    });
+
+    // Keyboard support
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") {
+        prevSlide();
+        resetAutoPlay();
+      } else if (e.key === "ArrowRight") {
+        nextSlide();
+        resetAutoPlay();
+      }
+    });
+
+    startAutoPlay();
   }
 }
 
-customElements.define('sabal-carousel', SabalCarousel);
+customElements.define("sabal-carousel", SabalCarousel);

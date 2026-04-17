@@ -2,8 +2,9 @@ class EnquiryForm extends HTMLElement {
   connectedCallback() {
     // Define styles for notifications within this component or globally if we want,
     // but injecting it if missing is fine.
+    // add formspree endpoint 
     this.innerHTML = `
-        <form class="enquiry-form" id="enquiryForm">
+        <form class="enquiry-form" id="enquiryForm" action="" method="POST">
           <div class="form__group">
             <label for="name" class="form__label">Full Name</label>
             <input
@@ -139,7 +140,7 @@ class EnquiryForm extends HTMLElement {
     const enquiryForm = this.querySelector("#enquiryForm");
     if (!enquiryForm) return;
 
-    enquiryForm.addEventListener("submit", (e) => {
+    enquiryForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const formData = new FormData(enquiryForm);
@@ -147,7 +148,6 @@ class EnquiryForm extends HTMLElement {
       const email = formData.get("email");
       const phone = formData.get("phone");
       const course = formData.get("course");
-      const message = formData.get("message");
 
       if (!name || !email || !phone || !course) {
         this.showNotification("Please fill in all required fields", "error");
@@ -166,13 +166,34 @@ class EnquiryForm extends HTMLElement {
         return;
       }
 
-      console.log("Form Data:", { name, email, phone, course, message });
+      const submitBtn = enquiryForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Sending...";
+      submitBtn.disabled = true;
 
-      this.showNotification(
-        "Thank you for your enquiry! We will contact you soon.",
-        "success",
-      );
-      enquiryForm.reset();
+      try {
+        const response = await fetch(enquiryForm.action, {
+          method: "POST",
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          this.showNotification(
+            "Thank you for your enquiry! We will contact you soon.",
+            "success"
+          );
+          enquiryForm.reset();
+        } else {
+          this.showNotification("Something went wrong! Please try again.", "error");
+        }
+      } catch (error) {
+        console.error("Submission error:", error);
+        this.showNotification("Network error. Please check your connection.", "error");
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
     });
   }
 }
