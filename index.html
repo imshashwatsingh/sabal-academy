@@ -30,24 +30,15 @@
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
     <script src="components/enquiry-form.js"></script>
+    <script src="components/carousel.js"></script>
   </head>
   <body>
     <!-- Navigation Bar -->
     <sabal-navbar base-path="."></sabal-navbar>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-      <div class="hero__content">
-        <h1 class="hero__title">Transform Your Future with Sabal Academy</h1>
-        <p class="hero__subtitle">
-          Excellence in education, personalized learning paths, and proven
-          career outcomes
-        </p>
-        <button class="btn btn--primary btn--lg" data-scroll-to="#enquiry">
-          Start Your Journey
-        </button>
-      </div>
-      <div class="hero__background"></div>
+    <!-- Hero Carousel Section -->
+    <section id="home">
+      <sabal-carousel></sabal-carousel>
     </section>
 
     <!-- About Section -->
