@@ -49,10 +49,11 @@ class Footer extends HTMLElement {
           <div class="footer__section">
             <h4 class="footer__title">Courses</h4>
             <ul class="footer__list">
-              <li><a href="${getLink('#courses')}">JEE Main & Advanced</a></li>
-              <li><a href="${getLink('#courses')}">NEET Preparation</a></li>
-              <li><a href="${getLink('#courses')}">Foundation Programme</a></li>
-              <li><a href="${getLink('#courses')}">CUET & Olympiad</a></li>
+              <li><a href="${basePath}/courses/jee.html">JEE Main & Advanced</a></li>
+              <li><a href="${basePath}/courses/neet.html">NEET Preparation</a></li>
+              <li><a href="${basePath}/courses/foundation.html">Foundation Programme</a></li>
+              <li><a href="${basePath}/courses/cuet.html">CUET</a> & <a href="${basePath}/courses/olympiad.html">Olympiad</a></li>
+              <li><a href="${basePath}/school-integration/school-integration.html">School Integration Programme</a></li>
             </ul>
           </div>
 
