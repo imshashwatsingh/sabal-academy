@@ -1121,6 +1121,9 @@ a:hover {
     transition: left 0.3s;
     gap: 0;
     box-shadow: var(--shadow-lg);
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .navbar__menu.active {
