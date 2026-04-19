@@ -120,13 +120,43 @@ class SabalCarousel extends HTMLElement {
             box-shadow: 0 0 10px rgba(255,255,255,0.8);
             transform: scale(1.3);
         }
+        /* Tablet */
         @media (max-width: 768px) {
-            .sabal-carousel { height: 60vh; min-height: 400px; }
+            .sabal-carousel { height: 65vh; min-height: 380px; }
             .carousel__title { font-size: 2rem; }
             .carousel__subtitle { font-size: 1rem; }
-            .carousel__control { width: 45px; height: 45px; font-size: 1.2rem; }
+            .carousel__control { width: 45px; height: 45px; font-size: 1.2rem; padding: 0.6rem; }
             .carousel__control--prev { left: 10px; }
             .carousel__control--next { right: 10px; }
+            .carousel__content { left: 5%; max-width: 85%; }
+            .carousel__dots { bottom: 18px; gap: 10px; }
+        }
+        /* Mobile phones */
+        @media (max-width: 480px) {
+            .sabal-carousel { height: auto; min-height: 56vw; }
+            .carousel__slides { height: 100%; }
+            .carousel__slide { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+            .carousel__slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center top;
+            }
+            .sabal-carousel { min-height: 260px; height: 56vw; max-height: 420px; }
+            .carousel__title { font-size: 1.3rem; margin-bottom: 0.5rem; }
+            .carousel__subtitle { font-size: 0.85rem; margin-bottom: 1rem; }
+            .carousel__content { left: 4%; max-width: 92%; top: 50%; }
+            .carousel__control {
+                width: 34px; height: 34px;
+                font-size: 0.9rem;
+                padding: 0;
+                border-width: 1.5px;
+                backdrop-filter: blur(3px);
+            }
+            .carousel__control--prev { left: 6px; }
+            .carousel__control--next { right: 6px; }
+            .carousel__dots { bottom: 10px; gap: 8px; }
+            .carousel__dot { width: 8px; height: 8px; }
         }
         </style>
 
@@ -220,6 +250,22 @@ class SabalCarousel extends HTMLElement {
         resetAutoPlay();
       }
     });
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const carousel = this.querySelector(".sabal-carousel");
+    carousel.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    carousel.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) { nextSlide(); } else { prevSlide(); }
+        resetAutoPlay();
+      }
+    }, { passive: true });
 
     startAutoPlay();
   }
