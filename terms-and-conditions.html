@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Terms &amp; Conditions - Sabal Academy. Read the rules and regulations governing the use of our services."
+    />
+    <meta name="keywords" content="terms and conditions, terms of service, Sabal Academy" />
+    <meta name="author" content="Sabal Academy" />
+    <meta name="theme-color" content="#1F6F5F" />
+
+    <title>Terms &amp; Conditions - Sabal Academy</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231F6F5F' width='100' height='100'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>SA</text></svg>"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- Web Components -->
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+
+    <style>
+      /* ── Page Hero ── */
+      .legal-hero {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        color: white;
+        padding: 5rem 2rem 4rem;
+        text-align: center;
+      }
+
+      .legal-hero__badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        color: white;
+        padding: 0.35rem 1rem;
+        border-radius: 99px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin-bottom: 1.25rem;
+      }
+
+      .legal-hero__title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .legal-hero__subtitle {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      /* ── Content Layout ── */
+      .legal-content {
+        padding: 4rem 0 5rem;
+        background-color: var(--white);
+      }
+
+      .legal-content .container {
+        max-width: 860px;
+      }
+
+      .legal-toc {
+        background: var(--light-gray);
+        border-left: 4px solid var(--primary-color);
+        border-radius: var(--radius-md);
+        padding: 1.5rem 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .legal-toc__title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .legal-toc__list {
+        list-style: none;
+        padding: 0;
+        columns: 2;
+        column-gap: 2rem;
+      }
+
+      .legal-toc__list li {
+        margin-bottom: 0.4rem;
+      }
+
+      .legal-toc__list a {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: color var(--transition-fast);
+      }
+
+      .legal-toc__list a:hover {
+        color: var(--primary-color);
+      }
+
+      /* ── Sections ── */
+      .legal-section {
+        margin-bottom: 2.75rem;
+        scroll-margin-top: 80px;
+      }
+
+      .legal-section__heading {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .legal-section__heading .icon {
+        font-size: 1.3rem;
+      }
+
+      .legal-section p {
+        color: var(--text-light);
+        line-height: 1.9;
+        margin-bottom: 0.85rem;
+        font-size: 0.97rem;
+      }
+
+      .legal-section ul,
+      .legal-section ol {
+        padding-left: 1.5rem;
+        color: var(--text-light);
+        line-height: 1.9;
+        font-size: 0.97rem;
+      }
+
+      .legal-section li {
+        margin-bottom: 0.4rem;
+      }
+
+      /* ── Info / Warning Box ── */
+      .info-box {
+        background: linear-gradient(
+          135deg,
+          rgba(31, 111, 95, 0.07) 0%,
+          rgba(47, 160, 132, 0.07) 100%
+        );
+        border: 1px solid rgba(31, 111, 95, 0.2);
+        border-radius: var(--radius-md);
+        padding: 1.25rem 1.5rem;
+        margin: 1rem 0;
+        display: flex;
+        gap: 0.75rem;
+        align-items: flex-start;
+      }
+
+      .info-box--warning {
+        background: rgba(255, 193, 7, 0.08);
+        border-color: rgba(255, 193, 7, 0.35);
+      }
+
+      .info-box__icon {
+        font-size: 1.3rem;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+
+      .info-box p {
+        margin: 0;
+        color: var(--text-dark);
+        font-size: 0.93rem;
+      }
+
+      /* ── Last Updated ── */
+      .legal-meta {
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      /* ── Contact Card ── */
+      .legal-contact-card {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        color: white;
+        border-radius: var(--radius-lg);
+        padding: 2.5rem;
+        text-align: center;
+        margin-top: 3rem;
+      }
+
+      .legal-contact-card h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+
+      .legal-contact-card p {
+        opacity: 0.9;
+        margin-bottom: 1.5rem;
+        font-size: 0.97rem;
+      }
+
+      .legal-contact-card a {
+        color: white;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 768px) {
+        .legal-hero__title { font-size: 2rem; }
+        .legal-toc__list { columns: 1; }
+      }
+
+      @media (max-width: 480px) {
+        .legal-hero { padding: 3rem 1rem 2.5rem; }
+        .legal-hero__title { font-size: 1.6rem; }
+        .legal-content { padding: 2.5rem 0 3.5rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <sabal-navbar base-path="."></sabal-navbar>
+
+    <!-- Hero -->
+    <section class="legal-hero">
+      <span class="legal-hero__badge">Legal</span>
+      <h1 class="legal-hero__title">Terms &amp; Conditions</h1>
+      <p class="legal-hero__subtitle">
+        Please read these terms carefully before using our services. By enrolling or accessing
+        our website, you agree to the terms outlined below.
+      </p>
+    </section>
+
+    <!-- Content -->
+    <main class="legal-content">
+      <div class="container">
+
+        <p class="legal-meta">Last Updated: April 2025 &nbsp;|&nbsp; Effective Date: April 2025</p>
+
+        <!-- Table of Contents -->
+        <nav class="legal-toc" aria-label="Table of Contents">
+          <p class="legal-toc__title">Quick Navigation</p>
+          <ul class="legal-toc__list">
+            <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+            <li><a href="#services">2. Services Offered</a></li>
+            <li><a href="#enrollment">3. Enrollment &amp; Fees</a></li>
+            <li><a href="#refund">4. Refund &amp; Cancellation</a></li>
+            <li><a href="#conduct">5. Student Code of Conduct</a></li>
+            <li><a href="#ip">6. Intellectual Property</a></li>
+            <li><a href="#liability">7. Limitation of Liability</a></li>
+            <li><a href="#privacy-ref">8. Privacy</a></li>
+            <li><a href="#changes">9. Changes to Terms</a></li>
+            <li><a href="#governing-law">10. Governing Law</a></li>
+            <li><a href="#contact-us">11. Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <!-- Introduction -->
+        <div class="info-box">
+          <span class="info-box__icon">ℹ️</span>
+          <p>
+            These Terms &amp; Conditions ("Terms") govern your use of the Sabal Academy website
+            (<strong>sabalisacademy.com</strong>) and all associated educational services provided by
+            <strong>Sabal Academy</strong>, located at Sector – 3, Rohini, New Delhi. By accessing,
+            browsing, or enrolling in any of our programs, you agree to be bound by these Terms.
+          </p>
+        </div>
+
+        <!-- Section 1 -->
+        <section id="acceptance" class="legal-section">
+          <h2 class="legal-section__heading">
+            <span class="icon">✅</span> 1. Acceptance of Terms
+          </h2>
+          <p>
+            By using our website or enrolling in any Sabal Academy course or programme, you acknowledge
+            that you have read, understood, and agree to be bound by these Terms and our
+            <a href="privacy-policy.html">Privacy Policy</a>.
+          </p>
+          <p>
+            If you are enrolling on behalf of a minor, you (as parent or guardian) accept these Terms
+            on their behalf and are responsible for ensuring compliance.
+          </p>
+          <p>
+            If you do not agree with any part of these Terms, you must discontinue use of our website
+            and services immediately.
+          </p>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="services" class="legal-section">
+          <h2 class="legal-section__heading">
+            <span class="icon">🎓</span> 2. Services Offered
+          </h2>
+          <p>Sabal Academy provides coaching and educational services including, but not limited to:</p>
+          <ul>
+            <li>JEE Main &amp; Advanced preparation</li>
+            <li>NEET preparation</li>
+            <li>Foundation Programme (Classes 6–10)</li>
+            <li>CUET &amp; Olympiad coaching</li>
+            <li>Droppers Programme</li>
+            <li>School Integration Programme</li>
+          </ul>
+          <p>
+            We reserve the right to modify, suspend, or discontinue any service at any time without
+            prior notice. We shall not be liable to you or any third party for any such modification,
+            suspension, or discontinuation.
+          </p>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="enrollment" class="legal-section">
+          <h2 class="legal-section__heading">
+            <span class="icon">📝</span> 3. Enrollment &amp; Fees
+          </h2>
+          <p>
+            Enrollment in any programme is confirmed only upon receipt of the full or agreed partial
+            payment (as per batch-specific terms communicated at the time of admission).
+          </p>
+          <ul>
+            <li>All fees are quoted in Indian Rupees (INR) and are inclusive of applicable taxes unless stated otherwise.</li>
+            <li>Fee structures are subject to revision at the start of each academic year.</li>
+            <li>Non-payment of dues may result in suspension of access to classes, study materials, and results.</li>
+            <li>Sabal Academy reserves the right to change batch timings, faculty, or curriculum to maintain quality standards.</li>
+          </ul>
+          <div class="info-box">
+            <span class="info-box__icon">💡</span>
+            <p>
+              For scholarship or fee concession inquiries, please contact us directly at
+              <a href="mailto:info@sabalisacademy.com">info@sabalisacademy.com</a>
+              or call +91 9654619822.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="refund" class="legal-section">
+          <h2 class="legal-section__heading">
+            <span class="icon">💰</span> 4. Refund &amp; Cancellation Policy
+          </h2>
+          <p>
+            We understand that circumstances may change. Our refund policy is as follows:
+          </p>
+          <ul>
+            <li>
+              <strong>Within 7 days of enrollment:</strong> A full refund (less administrative charges of ₹500)
+              will be issued if no classes have been attended.
+            </li>
+            <li>
+              <strong>8–30 days of enrollment:</strong> A 50% refund of the paid amount will be issued,
+              provided fewer than 4 classes have been attended.
+            </li>
+            <li>
+              <strong>After 30 days or 4+ classes attended:</strong> No refund will be issued.
+            </li>
+            <li>
+              <strong>Study materials:</strong> Once issued, study kits and materials are non-refundable.
+            </li>
+          </ul>
+          <div class="info-box info-box--warning">
+            <span class="info-box__icon">⚠️</span>
+            <p>
+              Refunds will be processed within 10–15 working days of receiving a valid written request
+              at <a href="mailto:info@sabalisacademy.com">info@sabalisacademy.com</a>.
+              Refunds are not applicable during promotional or discounted enrollment periods.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="conduct" class="legal-section">
+          <h2 class="legal-section__heading">
+            <span class="icon">🎯</span> 5. Student Code of Conduct
+          </h2>
+          <p>
+            Students enrolled at Sabal Academy are expected to maintain a respectful and academic environment.
+            The following conduct is strictly prohibited:
+          </p>
+          <ul>
+            <li>Cheating, plagiarism, or academic dishonesty in any form</li>
+            <li>Disruptive behaviour in classroom or online sessions</li>
+            <li>Recording, distributing, or reproducing class content without written permission</li>
+            <li>Harassment, bullying, or discrimination towards peers or faculty</li>
+            <li>Misuse of login credentials or sharing access with others</li>
+          </ul>
+          <p>
+            Violation of the code of conduct may result in disciplinary action, including suspension or
+            permanent removal from the programme without any refund.
+          </p>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="ip" class="legal-section">
+          <h2 class="legal-section__heading">
+            <span class="icon">©️</span> 6. Intellectual Property
+          </h2>
+          <p>
+            All content provided by Sabal Academy — including but not limited to course materials,
+            study notes, practice tests, videos, presentations, and website content — is the exclusive
+            intellectual property of Sabal Academy and is protected by copyright law.
+          </p>
+          <ul>
+            <li>You may not reproduce, distribute, or create derivative works without prior written consent.</li>
+            <li>Unauthorized sharing of study materials may result in legal action.</li>
+            <li>Our logo, name, and branding may not be used without express permission.</li>
+          </ul>
+        </section>
+
+        <!-- Section 7 -->
+        <section id="liability" class="legal-section">
+          <h2 class="legal-section__heading">
+            <span class="icon">⚖️</span> 7. Limitation of Liability
+          </h2>
+          <p>
+            Sabal Academy provides coaching and educational support to enhance student performance.
+            However, we cannot guarantee specific results, ranks, or exam outcomes, as these depend on
+            individual student effort, preparation, and exam conditions.
+          </p>
+          <p>
+            To the fullest extent permitted by applicable law, Sabal Academy shall not be liable for:
+          </p>
+          <ul>
+            <li>Any indirect, incidental, or consequential damages arising from use of our services</li>
+            <li>Loss of data or service interruptions due to technical issues beyond our reasonable control</li>
+            <li>Academic outcomes including exam results, ranks, or college admissions</li>
+          </ul>
+        </section>
+
+        <!-- Section 8 -->
+        <section id="privacy-ref" class="legal-section">
+          <h2 class="legal-section__heading">
+            <span class="icon">🔒</span> 8. Privacy
+          </h2>
+          <p>
+            Your privacy is important to us. The collection, use, and protection of your personal
+            information is governed by our <a href="privacy-policy.html">Privacy Policy</a>, which is
+            incorporated into these Terms by reference. By using our services, you acknowledge and
+            consent to the practices described in the Privacy Policy.
+          </p>
+        </section>
+
+        <!-- Section 9 -->
+        <section id="changes" class="legal-section">
+          <h2 class="legal-section__heading">
+            <span class="icon">🔄</span> 9. Changes to Terms
+          </h2>
+          <p>
+            Sabal Academy reserves the right to revise these Terms at any time. When changes are made,
+            we will update the "Last Updated" date at the top of this page. Continued use of our services
+            after changes are posted constitutes your acceptance of the revised Terms.
+          </p>
+          <p>
+            We recommend reviewing these Terms periodically. For significant changes, we will notify
+            enrolled students via email.
+          </p>
+        </section>
+
+        <!-- Section 10 -->
+        <section id="governing-law" class="legal-section">
+          <h2 class="legal-section__heading">
+            <span class="icon">🏛️</span> 10. Governing Law &amp; Jurisdiction
+          </h2>
+          <p>
+            These Terms shall be governed by and construed in accordance with the laws of India.
+            Any dispute arising in connection with these Terms or our services shall be subject to
+            the exclusive jurisdiction of the courts located in New Delhi, India.
+          </p>
+          <p>
+            We encourage resolution of disputes through amicable negotiation before initiating
+            formal legal proceedings.
+          </p>
+        </section>
+
+        <!-- Section 11 -->
+        <section id="contact-us" class="legal-section">
+          <h2 class="legal-section__heading">
+            <span class="icon">✉️</span> 11. Contact Us
+          </h2>
+          <p>If you have any questions about these Terms &amp; Conditions, please contact us:</p>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:info@sabalisacademy.com">info@sabalisacademy.com</a></li>
+            <li><strong>Phone:</strong> +91 9654619822</li>
+            <li><strong>Address:</strong> Sector – 3, Rohini, New Delhi</li>
+            <li><strong>Hours:</strong> Monday – Saturday, 9:00 AM – 6:00 PM</li>
+          </ul>
+        </section>
+
+        <!-- Contact CTA -->
+        <div class="legal-contact-card">
+          <h3>Questions About Our Terms?</h3>
+          <p>
+            Our team is here to help clarify anything. Reach us at
+            <a href="mailto:info@sabalisacademy.com">info@sabalisacademy.com</a>.
+          </p>
+          <a href="index.html#contact" class="btn btn--secondary">Contact Us</a>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <sabal-footer base-path="."></sabal-footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

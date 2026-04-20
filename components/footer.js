@@ -62,8 +62,8 @@ class Footer extends HTMLElement {
             <ul class="footer__list">
               <li><a href="${getLink('#about')}">About Us</a></li>
               <li><a href="${getLink('#contact')}">Contact</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="${basePath}/privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="${basePath}/terms-and-conditions.html">Terms &amp; Conditions</a></li>
             </ul>
           </div>
 
