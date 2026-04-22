@@ -1,13 +1,15 @@
 class Footer extends HTMLElement {
   connectedCallback() {
-    const basePath = this.getAttribute('base-path') || '.';
-    const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+    const basePath = this.getAttribute("base-path") || ".";
+    const isHomePage =
+      window.location.pathname.endsWith("index.html") ||
+      window.location.pathname.endsWith("/");
 
     const getLink = (hash) => {
-        if (hash.startsWith('#')) {
-            return isHomePage ? hash : `${basePath}/index.html${hash}`;
-        }
-        return hash;
+      if (hash.startsWith("#")) {
+        return isHomePage ? hash : `${basePath}/index.html${hash}`;
+      }
+      return hash;
     };
 
     this.innerHTML = `
@@ -60,8 +62,8 @@ class Footer extends HTMLElement {
           <div class="footer__section">
             <h4 class="footer__title">Quick Links</h4>
             <ul class="footer__list">
-              <li><a href="${getLink('#about')}">About Us</a></li>
-              <li><a href="${getLink('#contact')}">Contact</a></li>
+              <li><a href="${getLink("#about")}">About Us</a></li>
+              <li><a href="${getLink("#contact")}">Contact</a></li>
               <li><a href="${basePath}/privacy-policy.html">Privacy Policy</a></li>
               <li><a href="${basePath}/terms-and-conditions.html">Terms &amp; Conditions</a></li>
             </ul>
@@ -69,8 +71,8 @@ class Footer extends HTMLElement {
 
           <div class="footer__section">
             <h4 class="footer__title">Contact</h4>
-            <p class="footer__text">📞 +91 PHONE - 9654619822</p>
-            <p class="footer__text">✉️ info@sabalisacademy.com</p>
+            <p class="footer__text">📞 +91 9654619822</p>
+            <p class="footer__text">✉️ info@sabalacademy.com </p>
             <p class="footer__text">
               📍 Address: Sector - 3, ROHINI, NEW DELHI
             </p>
@@ -88,4 +90,4 @@ class Footer extends HTMLElement {
   }
 }
 
-customElements.define('sabal-footer', Footer);
+customElements.define("sabal-footer", Footer);
