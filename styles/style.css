@@ -1408,18 +1408,52 @@ a:hover {
 
 /* Courses Respective Pages */
 
-.about-course{
+.about-course {
   padding: var(--spacing-xl) 0;
 }
 
-.course-section__title{
+.course-section__title {
   font-size: var(--font-size-2xl);
   color: var(--primary-color);
   margin-bottom: var(--spacing-md);
 }
 
-.course-section__text{
+.course-section__text {
   color: var(--text-light);
   margin-bottom: var(--spacing-lg);
   line-height: 1.7;
+}
+
+/* SIP DOWNLOAD BTN */
+
+.btn--brochure {
+  background: rgba(255, 255, 255, 0.08); /* subtle glass look */
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  backdrop-filter: blur(6px);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0.75rem 1.8rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+
+  transition: all var(--transition-base);
+}
+
+.btn--brochure:hover {
+  background: white;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn--brochure svg {
+  transition: transform var(--transition-base);
+}
+
+.btn--brochure:hover svg {
+  transform: translateY(2px); /* subtle download motion */
 }
